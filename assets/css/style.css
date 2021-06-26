@@ -40,7 +40,7 @@ body:before {
     #4b79a1
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: -1;
 }
 
@@ -180,7 +180,6 @@ footer {
   background-color: #161616;
   height: auto;
   width: 100vw;
-  color: #fff;
   border-top: 1px solid var(--gold);
 }
 
@@ -199,7 +198,7 @@ footer {
 
 .social-links {
   display: flex;
-  list-style: none;
+  width: 100%;
 }
 
 .social-links ul {
@@ -208,18 +207,15 @@ footer {
   margin: auto;
   display: flex;
   align-items: center;
-}
-
-.social-items {
+  justify-content: space-around;
   list-style: none;
 }
 
 .social-items a {
-  padding: 0.5em 1em;
   font-size: 2em;
   color: #fff;
-  transition: all ease-in-out 0.5s;
 }
+
 .social-items a:hover {
   color: var(--gold);
 }
