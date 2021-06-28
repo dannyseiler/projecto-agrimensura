@@ -214,17 +214,28 @@ nav ul.nav-links li:hover::after ul {
 
 /* Main */
 main {
-  min-height: calc(130vh - 10vh - 10vh);
+  min-height: calc(150vh - 10vh - 10vh);
   display: flex;
   margin-top: 5.4em;
 }
 
 .main-container {
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
+.header-main {
+  padding: 1em;
+  margin: 5em;
+  background-color: rgba(119, 119, 119, 0.411);
+  border-radius: 0.5em;
+}
+.header-main h1 {
+  font-size: 3.5em;
+  color: #1b1b1b;
+}
 .body-container {
   width: 30em;
   margin: 1em 2em;
@@ -301,7 +312,7 @@ footer {
 
   .nav-links {
     position: absolute;
-    top: 8vh;
+    top: 11vh;
     right: 0vh;
     height: 30vh;
     background-color: #343434;
@@ -320,7 +331,6 @@ footer {
     opacity: 0;
     margin: 0;
     padding: 0;
-    height: 3em;
   }
 
   .item-list {
@@ -328,7 +338,8 @@ footer {
   }
   .nav-active {
     margin-right: 2vh;
-    width: 9em;
+    padding: 0.5em;
+    height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
   }
@@ -369,6 +380,7 @@ footer {
     margin: 0.2em;
   }
   .submenu li a {
+    font-size: 1em;
     margin: 0.5rem;
   }
 
@@ -382,8 +394,8 @@ footer {
 
   nav ul.nav-links li:hover ul {
     display: block;
-    top: 0;
-    right: 11vh;
+    top: 2vh;
+    right: 16vh;
   }
 
   /* Icono del Sub-menú Servicios */

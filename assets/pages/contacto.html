@@ -14,7 +14,6 @@
     <title>CDM Agrimensura</title>
   </head>
   <body>
-    
     <header class="header">
       <div class="logo-container">
           <a href="../../index.html">
@@ -48,7 +47,7 @@
 
             <li><a href="./noticias.html"  class="item-list">Noticias</a></li>
             <li><a href="./nosotros.html"  class="item-list">Nosotros</a></li>
-            <li><a href="#"  class="item-list">Contacto</a></li>
+            <li><a href="./contacto.html"  class="item-list">Contacto</a></li>
           </ul>
           <div class="burger">
             <div class="line1"></div>
@@ -91,6 +90,19 @@
             </p>
             <p>
               <input type="tel" name="phone" placeholder="Teléfono"/>
+            </p>
+            <p>
+              <input type="text" name="list" id="list" class="list" list="servicios" placeholder="Asunto">
+              <datalist id="servicios">
+                <label for="elementos">Selecciona una opción de la lista:</label>
+                <select id="elementos" name="elementos">
+                  <option>Estados Parcelarios</option>
+                  <option>Certificado de Deslinde y Amojonamiento</option>
+                  <option>Relevamiento Planialtimétrico</option>
+                  <option>Declaración Jurada</option>
+                  <option>Otro</option>
+                </select>                
+              </datalist>
             </p>
             <p class="block">
               <textarea name="message" id="message" placeholder="Mensaje" rows="3" ></textarea>
