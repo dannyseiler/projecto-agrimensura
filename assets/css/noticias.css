@@ -13,7 +13,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   min-height: 100%;
-  background-image: url("../images/002-logo-mdp.jpg");
+  background-image: url("../images/005.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   background-position: center;
@@ -214,27 +214,48 @@ nav ul.nav-links li:hover::after ul {
 
 /* Main */
 main {
-  min-height: calc(130vh - 10vh - 10vh);
+  min-height: calc(150vh - 10vh - 10vh);
   display: flex;
   margin-top: 5.4em;
 }
-
 .main-container {
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-
-.body-container {
-  width: 30em;
-  margin: 1em 2em;
-  padding: 2em;
-  background-color: #111010c2;
-  border: 1px solid transparent;
-  border-radius: 0.2em;
+.header-main {
+  padding: 5em;
+}
+.header-main h1 {
+  text-align: center;
+  font-size: 4.5em;
+  color: rgb(65, 65, 65);
 }
 
-p {
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin: 0 3em 3em;
+  padding: 1em;
+  background-color: rgba(17, 16, 16, 0.842);
+  border: 1px solid transparent;
+  border-radius: 0.5em;
+}
+.articles {
+  max-width: 30em;
+  margin: 1.5em;
+}
+
+.articles h2 {
+  text-align: left;
+  padding-bottom: 0.3em;
+  color: #fff;
+}
+
+.articles p {
   text-align: justify;
   color: #fff;
 }
