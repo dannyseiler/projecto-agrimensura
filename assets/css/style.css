@@ -127,9 +127,7 @@ li.item-firma:last-child {
 .nav-links li a:hover {
   transition: all ease-in 0.3s;
 }
-
-/* Menú Desplegable */
-
+/* --------- Menú Desplegable --------- */
 .nav-links li ul {
   position: absolute;
   width: max-content;
@@ -160,8 +158,7 @@ li.item-firma:last-child {
 .nav-links li ul a:hover {
   transition: all ease-in 0.3s;
 }
-
-/* Sub-menú de la sección Servicios */
+/* --------- Sub-menú de la sección Servicios --------- */
 
 .submenu {
   width: max-content;
@@ -196,14 +193,15 @@ nav ul.nav-links li:hover::after ul {
   display: block;
 }
 
-/* Icono del Sub-menú Servicios */
+/* --------- Icono del Sub-menú Servicios --------- */
 
 .fas.fa-angle-down {
   margin-left: 0.2em;
   color: var(--gold);
 }
 
-/* Menu Hamburgesa*/
+/* --------- Menu Hamburgesa --------- */
+
 .burger {
   display: none;
   cursor: pointer;
@@ -216,7 +214,8 @@ nav ul.nav-links li:hover::after ul {
   transition: all 0.3s ease;
 }
 
-/* Main */
+/* --------- Main --------- */
+
 main {
   display: flex;
   margin-top: 10em;
@@ -253,7 +252,8 @@ p {
   text-align: justify;
   color: var(--grey);
 }
-/* Footer */
+
+/* --------- Footer --------- */
 
 footer {
   position: fixed;
@@ -304,17 +304,33 @@ footer {
   text-align: center;
   color: #fff;
 }
-
-/* Media Queries */
-
-@media screen and (min-width: 1025px) {
+/* --------- Media Queries --------- */
+@media screen and (min-width: 1367px) {
   main {
     display: flex;
-    margin: 10em;
     max-height: max-content;
+    margin: 10em 0;
   }
   .header-main {
-    margin-top: 0em;
+    margin: 3em;
+  }
+  .body-container {
+    width: 50%;
+    height: max-content;
+    padding: 3em;
+    background-color: var(--black-background);
+    box-shadow: 5px 10px 10px 0px var(--black-background);
+    border-radius: 0.5em;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  main {
+    display: flex;
+    max-height: max-content;
+    margin: 6em 0 10em;
+  }
+  .header-main {
+    margin: 3em;
   }
   .body-container {
     width: 50%;
@@ -431,10 +447,11 @@ footer {
   }
   /* Main */
   main {
-    margin: 8em 0;
+    display: flex;
+    max-height: max-content;
   }
   .header-main {
-    margin: 1em;
+    margin-top: 10em;
   }
   .header-main h1 {
     font-size: 2em;
@@ -442,8 +459,10 @@ footer {
   .body-container {
     width: 50%;
     height: max-content;
-    margin: 5em;
     padding: 3em;
+    background-color: var(--black-background);
+    box-shadow: 5px 10px 10px 0px var(--black-background);
+    border-radius: 0.5em;
   }
   .body-container p {
     font-size: 1em;
@@ -555,10 +574,11 @@ footer {
   }
   /* Main */
   main {
-    margin: 7em 0;
+    display: flex;
+    max-height: max-content;
   }
   .header-main {
-    margin: 1em;
+    margin-top: 10em;
   }
   .header-main h1 {
     font-size: 2em;

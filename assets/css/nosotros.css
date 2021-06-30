@@ -127,8 +127,7 @@ li.item-firma:last-child {
 .nav-links li a:hover {
   transition: all ease-in 0.3s;
 }
-
-/* Menú Desplegable */
+/* --------- Menú Desplegable --------- */
 
 .nav-links li ul {
   position: absolute;
@@ -160,7 +159,7 @@ li.item-firma:last-child {
   transition: all ease-in 0.3s;
 }
 
-/* Sub-menú de la sección Servicios */
+/* --------- Sub-menú de la sección Servicios --------- */
 
 .submenu {
   width: max-content;
@@ -195,14 +194,15 @@ nav ul.nav-links li:hover::after ul {
   display: block;
 }
 
-/* Icono del Sub-menú Servicios */
+/* --------- Icono del Sub-menú Servicios --------- */
 
 .fas.fa-angle-down {
   margin-left: 0.2em;
   color: var(--gold);
 }
 
-/* Menu Hamburgesa*/
+/* --------- Menu Hamburgesa --------- */
+
 .burger {
   display: none;
   cursor: pointer;
@@ -214,7 +214,9 @@ nav ul.nav-links li:hover::after ul {
   margin: 5px;
   transition: all 0.3s ease;
 }
-/* Main */
+
+/* --------- Main --------- */
+
 main {
   display: flex;
   margin: 5em;
@@ -264,7 +266,9 @@ article {
 .articles img {
   width: 10em;
 }
-/* Footer */
+
+/* --------- Footer --------- */
+
 footer {
   position: fixed;
   bottom: 0;
@@ -314,9 +318,7 @@ footer {
   text-align: center;
   color: #fff;
 }
-
-/* Media Queries */
-
+/* --------- Media Queries --------- */
 @media screen and (min-width: 1025px) {
   main {
     display: flex;
