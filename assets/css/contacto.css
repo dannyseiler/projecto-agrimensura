@@ -181,9 +181,10 @@ nav ul.nav-links li ul {
 }
 nav ul.nav-links li:hover ul {
   display: block;
-  top: 7.5vh;
+  top: 6vh;
   right: 17vh;
 }
+
 nav ul.nav-links li:hover::after ul {
   content: "";
   position: absolute;
@@ -233,18 +234,14 @@ main {
 .form-container-all {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 60em;
-  margin: 1em 2em;
+  width: 70%;
   box-shadow: 5px 10px 10px 0px var(--black-background);
-  border-radius: 0.5em;
 }
 .form-container-all h3 {
   color: var(--grey);
 }
 .contact-info {
   padding: 2em;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
   background-color: #371426ce;
 }
 .contact-info p {
@@ -263,8 +260,6 @@ div.info3 {
 }
 .form-container {
   padding: 1em;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
   background-color: #111010ce;
 }
 
@@ -358,14 +353,69 @@ footer {
   color: #fff;
 }
 /* --------- Media Queries --------- */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1921px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 7.5vh;
+    right: 16vh;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 8vh;
+    right: 16vh;
+  }
+
+  /* --------- Main --------- */
+}
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+  .submenu {
+    width: max-content;
+    padding: 0.5em;
+    right: 21vh;
+    z-index: 1;
+  }
+  .submenu li {
+    margin: 0.2em;
+  }
+  .submenu li a {
+    margin: 0.5rem;
+  }
+  .submenu.show {
+    display: block;
+  }
+  nav ul.nav-links li ul {
+    display: none;
+  }
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 11vh;
+    right: 18vh;
+  }
+  nav ul.nav-links li:hover::after ul {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
-    margin: 0em;
+    margin: 6em 0 10em;
     max-height: max-content;
   }
   .header-main {
-    margin-top: 10em;
+    margin: 3em;
+  }
+  .header-main h1 {
+    font-size: 2em;
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1024px) {
@@ -406,6 +456,7 @@ footer {
   }
   .nav-active {
     margin-right: 2vh;
+    top: 10vh;
     padding: 0.5em;
     height: max-content;
     border: 1px solid var(--gold);
@@ -442,7 +493,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -461,18 +513,21 @@ footer {
   }
 
   nav ul.nav-links li:hover ul {
+    width: 10em;
     display: block;
-    top: 2vh;
-    right: 16vh;
+    top: 0vh;
+    right: 14vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
-  /* Main */
+
+  /* --------- Main --------- */
+
   .main-container {
     margin: 8em 0;
     padding: 0;
@@ -487,19 +542,6 @@ footer {
 
     box-shadow: 5px 10px 10px 0px var(--black-background);
     border-radius: 0.5em;
-  }
-  .contact-info {
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-bottom-left-radius: 0;
-  }
-  .contact-info p {
-    font-size: 1em;
-  }
-  .form-container {
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    border-top-right-radius: 0;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 720px) {
@@ -590,7 +632,7 @@ footer {
     width: 10em;
     display: block;
     top: 0vh;
-    right: 16vh;
+    right: 14vh;
   }
   /* Icono del Sub-menú Servicios */
   .fas.fa-angle-down {
@@ -615,19 +657,6 @@ footer {
 
     box-shadow: 5px 10px 10px 0px var(--black-background);
     border-radius: 0.5em;
-  }
-  .contact-info {
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-bottom-left-radius: 0;
-  }
-  .contact-info p {
-    font-size: 1em;
-  }
-  .form-container {
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    border-top-right-radius: 0;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
@@ -662,6 +691,7 @@ footer {
   .nav-active {
     margin-right: 2vh;
     padding: 0.5em;
+    top: 15vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
@@ -744,18 +774,5 @@ footer {
     grid-template-columns: 1fr;
     width: 100%;
     margin: 0em;
-  }
-  .contact-info {
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-bottom-left-radius: 0;
-  }
-  .contact-info p {
-    font-size: 1em;
-  }
-  .form-container {
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    border-top-right-radius: 0;
   }
 }

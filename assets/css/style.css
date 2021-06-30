@@ -183,7 +183,7 @@ nav ul.nav-links li ul {
 
 nav ul.nav-links li:hover ul {
   display: block;
-  top: 7.5vh;
+  top: 6vh;
   right: 17vh;
 }
 
@@ -305,7 +305,45 @@ footer {
   color: #fff;
 }
 /* --------- Media Queries --------- */
-@media screen and (min-width: 1367px) {
+
+@media screen and (min-width: 1921px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 7.5vh;
+    right: 16vh;
+  }
+  /* --------- Main --------- */
+
+  main {
+    display: flex;
+    max-height: max-content;
+    margin: 10em 0;
+  }
+  .header-main {
+    margin: 3em;
+  }
+  .body-container {
+    width: 50%;
+    height: max-content;
+    padding: 3em;
+    background-color: var(--black-background);
+    box-shadow: 5px 10px 10px 0px var(--black-background);
+    border-radius: 0.5em;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 8vh;
+    right: 16vh;
+  }
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
     max-height: max-content;
@@ -324,6 +362,16 @@ footer {
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 10vh;
+    right: 16vh;
+  }
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
     max-height: max-content;
@@ -332,6 +380,9 @@ footer {
   .header-main {
     margin: 3em;
   }
+  .header-main h1 {
+    font-size: 2em;
+  }
   .body-container {
     width: 50%;
     height: max-content;
@@ -339,6 +390,9 @@ footer {
     background-color: var(--black-background);
     box-shadow: 5px 10px 10px 0px var(--black-background);
     border-radius: 0.5em;
+  }
+  .body-container p {
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1024px) {
@@ -380,6 +434,7 @@ footer {
   .nav-active {
     margin-right: 2vh;
     padding: 0.5em;
+    top: 10vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
@@ -415,7 +470,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -434,20 +490,24 @@ footer {
   }
 
   nav ul.nav-links li:hover ul {
+    width: 10em;
     display: block;
-    top: 2vh;
-    right: 10vh;
+    top: 0vh;
+    right: 14vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
-  /* Main */
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
+    margin-top: 0;
     max-height: max-content;
   }
   .header-main {
@@ -457,12 +517,8 @@ footer {
     font-size: 2em;
   }
   .body-container {
-    width: 50%;
-    height: max-content;
-    padding: 3em;
-    background-color: var(--black-background);
-    box-shadow: 5px 10px 10px 0px var(--black-background);
-    border-radius: 0.5em;
+    width: 70%;
+    padding: 2em;
   }
   .body-container p {
     font-size: 1em;
@@ -542,7 +598,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -566,15 +623,18 @@ footer {
     right: 16vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
-  /* Main */
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
+    margin-top: 0;
     max-height: max-content;
   }
   .header-main {
@@ -584,7 +644,7 @@ footer {
     font-size: 2em;
   }
   .body-container {
-    width: 90%;
+    width: 70%;
     height: max-content;
     padding: 2em;
   }
@@ -598,10 +658,6 @@ footer {
   }
   header {
     width: 100%;
-  }
-  .logo-container {
-    width: 5em;
-    margin: 0;
   }
   .nav-links {
     position: absolute;
@@ -631,6 +687,7 @@ footer {
   .nav-active {
     margin-right: 2vh;
     padding: 0.5em;
+    top: 15vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
@@ -669,7 +726,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -694,16 +752,19 @@ footer {
     right: 16vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
-  /* Main */
-  .main-container {
-    margin: 8em 0 10em;
-    padding: 0;
+
+  /* --------- Main --------- */
+
+  main {
+    display: flex;
+    margin-top: 10em;
+    max-height: max-content;
   }
   .header-main {
     margin: 1em 0;

@@ -184,8 +184,8 @@ nav ul.nav-links li ul {
 
 nav ul.nav-links li:hover ul {
   display: block;
-  top: 7.5vh;
-  right: 17vh;
+  top: 6vh;
+  right: 14vh;
 }
 
 nav ul.nav-links li:hover::after ul {
@@ -241,7 +241,7 @@ main {
 }
 
 .body-container {
-  width: 110vh;
+  width: 80%;
   margin: 1em;
   padding: 1em;
   background-color: var(--black-background);
@@ -324,8 +324,20 @@ footer {
   text-align: center;
   color: #fff;
 }
+
 /* --------- Media Queries --------- */
-@media screen and (min-width: 1367px) {
+
+@media screen and (min-width: 1921px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 7.5vh;
+    right: 16vh;
+  }
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
     margin: 10em;
@@ -333,16 +345,111 @@ footer {
   }
   .header-main {
     margin-top: 0em;
+  }
+  .header-main h1 {
+    font-size: 2em;
+  }
+  .articles {
+    width: 40em;
+  }
+  .articles h2 {
+    font-size: 1.5em;
+  }
+  .articles h3 {
+    font-size: 1.1em;
+  }
+  .articles p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 8vh;
+    right: 16vh;
+  }
+
+  /* --------- Main --------- */
+
+  main {
+    display: flex;
+    margin: 10em;
+    max-height: max-content;
+  }
+  .header-main {
+    margin-top: 0em;
+  }
+  .header-main h1 {
+    font-size: 2em;
+  }
+  .articles h2 {
+    font-size: 1.5em;
+  }
+  .articles h3 {
+    font-size: 1.1em;
+  }
+  .articles p {
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
+  /* --------- Sub-menú de la sección Servicios --------- */
+  .submenu {
+    width: max-content;
+    padding: 0.5em;
+    right: 21vh;
+    z-index: 1;
+  }
+  .submenu li {
+    margin: 0.2em;
+  }
+  .submenu li a {
+    margin: 0.5rem;
+  }
+  .submenu.show {
+    display: block;
+  }
+  nav ul.nav-links li ul {
+    display: none;
+  }
+  nav ul.nav-links li:hover ul {
+    display: block;
+    top: 10vh;
+    right: 16vh;
+  }
+  nav ul.nav-links li:hover::after ul {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+  /* --------- Main --------- */
+
   main {
     display: flex;
     margin: 10em;
     max-height: max-content;
   }
+
   .header-main {
     margin-top: 0em;
+  }
+  .header-main h1 {
+    font-size: 2em;
+  }
+  .articles {
+    width: 20em;
+  }
+  .articles h2 {
+    font-size: 1.5em;
+  }
+  .articles h3 {
+    font-size: 1.1em;
+  }
+  .articles p {
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1024px) {
@@ -384,6 +491,7 @@ footer {
   .nav-active {
     margin-right: 2vh;
     padding: 0.5em;
+    top: 10vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
@@ -419,7 +527,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -438,18 +547,21 @@ footer {
   }
 
   nav ul.nav-links li:hover ul {
+    width: 10em;
     display: block;
-    top: 2vh;
+    top: 0vh;
     right: 16vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
-  /* Main */
+
+  /* --------- Main --------- */
+
   main {
     margin: 8em 0;
   }
@@ -540,7 +652,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -562,17 +675,18 @@ footer {
     width: 10em;
     display: block;
     top: 0vh;
-    right: 16vh;
+    right: 12vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
 
-  /* Main */
+  /* --------- Main --------- */
+
   .main-container {
     margin: 8em 0 10em;
     padding: 0;
@@ -634,6 +748,7 @@ footer {
   .nav-active {
     margin-right: 2vh;
     padding: 0.5em;
+    top: 15vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
@@ -672,7 +787,8 @@ footer {
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-  /* Sub-menú de la sección Servicios */
+
+  /* --------- Sub-menú de la sección Servicios --------- */
 
   .submenu li {
     margin: 0.2em;
@@ -697,13 +813,15 @@ footer {
     right: 16vh;
   }
 
-  /* Icono del Sub-menú Servicios */
+  /* --------- Icono del Sub-menú Servicios --------- */
 
   .fas.fa-angle-down {
     margin-left: 0.2em;
     color: var(--gold);
   }
-  /* Main */
+
+  /* --------- Main --------- */
+
   .main-container {
     margin: 8em 0 10em;
     padding: 0;
