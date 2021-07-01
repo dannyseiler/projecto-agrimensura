@@ -17,14 +17,11 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/008.jpg");
-  background-repeat: no-repeat;
+  background: url("../images/008.jpg") no-repeat center fixed;
   background-size: 100vw 100vh;
-  background-position: center;
-  background-attachment: fixed;
 }
 
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -183,9 +180,10 @@ nav ul.nav-links li ul {
 }
 
 nav ul.nav-links li:hover ul {
+  width: 10em;
   display: block;
   top: 6vh;
-  right: 17vh;
+  right: 16vh;
 }
 
 nav ul.nav-links li:hover::after ul {
@@ -281,8 +279,6 @@ footer {
   width: 100%;
   height: max-content;
   margin-top: auto;
-  background-color: var(--black-background);
-  border-top: 1px solid var(--gold);
 }
 
 .footer-content {
@@ -291,6 +287,8 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: var(--black-background);
+  border-top: 1px solid var(--gold);
 }
 .inner-footer {
   margin: 0;
@@ -415,8 +413,8 @@ footer {
   }
   nav ul.nav-links li:hover ul {
     display: block;
-    top: 10vh;
-    right: 16vh;
+    top: 11vh;
+    right: 18vh;
   }
   nav ul.nav-links li:hover::after ul {
     content: "";
@@ -674,7 +672,7 @@ footer {
     width: 10em;
     display: block;
     top: 0vh;
-    right: 12vh;
+    right: 17vh;
   }
 
   /* --------- Icono del Sub-menú Servicios --------- */
@@ -809,7 +807,7 @@ footer {
     width: 10em;
     display: block;
     top: 0vh;
-    right: 16vh;
+    right: 17vh;
   }
 
   /* --------- Icono del Sub-menú Servicios --------- */

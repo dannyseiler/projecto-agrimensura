@@ -17,14 +17,11 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/010-office.jpg");
-  background-repeat: no-repeat;
+  background: url("../images/010-office.jpg") no-repeat center fixed;
   background-size: 100vw 100vh;
-  background-position: center;
-  background-attachment: fixed;
 }
 
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -276,8 +273,6 @@ footer {
   width: 100%;
   height: max-content;
   margin-top: auto;
-  background-color: var(--black-background);
-  border-top: 1px solid var(--gold);
 }
 
 .footer-content {
@@ -286,6 +281,8 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: var(--black-background);
+  border-top: 1px solid var(--gold);
 }
 .inner-footer {
   margin: 0;
@@ -328,7 +325,7 @@ footer {
     right: 16vh;
   }
 }
-@media screen and (min-width: 1367px) {
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
   /* --------- Sub-menú de la sección Servicios --------- */
 
   nav ul.nav-links li:hover ul {
@@ -359,7 +356,7 @@ footer {
   }
   nav ul.nav-links li:hover ul {
     display: block;
-    top: 10vh;
+    top: 11vh;
     right: 18vh;
   }
   nav ul.nav-links li:hover::after ul {
@@ -418,15 +415,15 @@ footer {
   .item-list {
     font-size: 1em;
   }
+
   .nav-active {
+    top: 15vh;
     margin-right: 2vh;
     padding: 0.5em;
-    top: 10vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
   }
-
   @-webkit-keyframes navLinkFade {
     from {
       opacity: 0;
@@ -479,7 +476,7 @@ footer {
     width: 10em;
     display: block;
     top: 0vh;
-    right: 14vh;
+    right: 17vh;
   }
 
   /* --------- Icono del Sub-menú Servicios --------- */
@@ -549,6 +546,7 @@ footer {
     font-size: 1em;
   }
   .nav-active {
+    top: 15vh;
     margin-right: 2vh;
     padding: 0.5em;
     height: max-content;
@@ -608,7 +606,7 @@ footer {
     width: 10em;
     display: block;
     top: 0vh;
-    right: 14vh;
+    right: 17vh;
   }
 
   /* --------- Icono del Sub-menú Servicios --------- */
@@ -672,9 +670,9 @@ footer {
     font-size: 1em;
   }
   .nav-active {
+    top: 15vh;
     margin-right: 2vh;
     padding: 0.5em;
-    top: 15vh;
     height: max-content;
     border: 1px solid var(--gold);
     transform: translateX(0%);
