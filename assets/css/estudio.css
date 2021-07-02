@@ -1,65 +1,61 @@
 :root {
   --gold: #ffd700;
   --darkgold: #ac9202;
-  --brown: #342e2e;
   --grey: #d8d8d8;
   --darkgrey: #343434;
   --black-background: #111010cc;
 }
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: url("../images/008.jpg") no-repeat center fixed;
-  background-size: 100vw 100vh;
+  padding-top: 90px;
+  background: url("../images/004.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+img {
+  width: 50px;
+  margin: 0;
+  border-radius: 50%;
 }
 
 .header {
-  position: fixed;
-  top: 0;
   width: 100%;
-  min-height: 10vh;
+  height: 80px;
+  padding: 0 20px;
+  top: 0;
+  left: 0;
   background-color: var(--darkgrey);
   border-bottom: 1px solid var(--gold);
+  position: fixed;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  transition: all ease-in 0.3s;
-  padding: 0px 10px;
   z-index: 100;
 }
-.logo-container {
+.logo__div {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.logo-container img.logo-am {
-  width: 5em;
-  margin: 0.3em;
-  border-radius: 50%;
-}
-ul.firma {
-  margin-left: 1em;
+.firma {
+  margin-left: 10px;
   list-style: none;
   color: #fff;
 }
-ul.firma a {
+.link {
   text-decoration: none;
   color: #fff;
 }
-ul.firma a:visited {
+.link:visited {
   text-decoration: none;
   color: #fff;
 }
-ul.firma a::after {
+.link::after {
   content: "";
   display: block;
   height: 0.2em;
@@ -69,177 +65,111 @@ ul.firma a::after {
   right: -1em;
   transition: all ease-in-out 0.5s;
 }
-ul.firma a:hover::after {
+.link:hover::after {
   width: 100%;
 }
-ul.firma a:hover {
+.link:hover {
   transition: all ease-in 0.3s;
 }
-li.item-firma {
+.item-firma {
   font-size: 0.8em;
 }
-li.item-firma:last-child {
+.item-firma:last-child {
   margin-bottom: 0.3em;
 }
-
-.item-list {
-  margin: 1em;
-  padding-bottom: 0.3em;
-}
-
-.nav-links {
+/* --------- Items Nav --------- */
+.lista {
   display: flex;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-links li {
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+.slide {
+  list-style: none;
 }
 
-.nav-links a {
-  position: relative;
-  color: #fff;
+.item {
   text-decoration: none;
+  padding: 20px 30px;
+  color: white;
+}
+.listItem {
+  position: relative;
+  text-align: center;
 }
 
-.nav-links li a::after {
-  content: "";
+.slide {
   position: absolute;
+  display: none;
+  top: 33px;
+  background: var(--darkgrey);
+  border-radius: 3px;
+  border: 1px solid var(--gold);
+  width: 200px;
+}
+
+.listItem:hover > .slide {
   display: block;
-  height: 0.2em;
-  width: 0%;
-  background-color: var(--gold);
-  border-radius: 0.5em;
-  bottom: -0.3em;
-  transition: all ease-in 0.3s;
 }
-.nav-links li a:hover::after {
-  width: 100%;
-}
-.nav-links li a:hover {
-  transition: all ease-in 0.3s;
+.listItem .slide li:hover > ul {
+  display: block;
 }
 
-/* --------- Menú Desplegable --------- */
-
-.nav-links li ul {
+.slide ul {
   position: absolute;
-  width: max-content;
-  top: 11vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--darkgrey);
-  border-radius: 0.5em;
+  right: 200px;
+  top: 0;
+}
+.item:hover {
+  background: var(--darkgrey);
+  border-radius: 3px;
   border: 1px solid var(--gold);
 }
-
-.nav-links li ul a::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 0.2em;
-  width: 0%;
-  background-color: var(--gold);
-  border-radius: 0.5em;
-  bottom: -0.3em;
-  transition: all ease-in 0.3s;
+.slide:hover {
+  border: 1px solid var(--gold);
 }
-.nav-links li ul a:hover::after {
-  width: 100%;
-}
-
-.nav-links li ul a:hover {
-  transition: all ease-in 0.3s;
-}
-/* --------- Sub-menú de la sección Servicios --------- */
-
-.submenu {
-  width: max-content;
-  padding: 0.5em;
-  right: 21vh;
-  z-index: 1;
-}
-.submenu li {
-  margin: 0.2em;
-}
-.submenu li a {
-  margin: 0.5rem;
-}
-
-.submenu.show {
+.slide li a {
+  color: white;
+  padding: 10px 20px;
   display: block;
 }
 
-nav ul.nav-links li ul {
+#boton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
   display: none;
 }
 
-nav ul.nav-links li:hover ul {
-  width: 10em;
-  display: block;
-  top: 6vh;
-  right: 16vh;
-}
-
-nav ul.nav-links li:hover::after ul {
-  content: "";
-  position: absolute;
-  display: block;
-}
 /* --------- Icono del Sub-menú Servicios --------- */
-
 .fas.fa-angle-down {
   margin-left: 0.2em;
   color: var(--gold);
 }
-
-/* --------- Menu Hamburgesa --------- */
-.burger {
-  display: none;
-  cursor: pointer;
-}
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
 /* --------- Main --------- */
 
-main {
-  display: flex;
-  margin: 10em;
-  max-height: max-content;
-}
-
 .main-container {
+  display: flex;
+  height: max-content;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10em;
 }
-
 .header-main {
   padding: 1em;
-  margin: 5em;
-  background-color: rgba(119, 119, 119, 0.411);
+  margin: 3em;
+  background-color: #cfcecead;
   border-radius: 0.5em;
 }
 .header-main h1 {
-  text-align: center;
-  font-size: 3.5em;
+  font-size: 2em;
   color: #1b1b1b;
 }
 .body-container {
-  width: 90%;
-  margin: 1em;
+  width: 60em;
   padding: 1em;
   background-color: var(--black-background);
   box-shadow: 5px 10px 10px 0px var(--black-background);
@@ -249,39 +179,39 @@ main {
   justify-content: space-evenly;
 }
 .articles {
-  width: 30em;
+  width: 20em;
   margin: 1em;
 }
-.articles h2 {
-  font-size: 1.7em;
-  padding: 0.3em 0;
+html {
+  scroll-behavior: smooth;
 }
-.articles h3 {
-  padding: 0.5em 0;
+article [a] {
+  scroll-margin-top: 40px;
+}
+.articles a {
+  text-decoration: none;
+  color: var(--gold);
   font-size: 1.3em;
+  cursor: default;
 }
-.articles h2,
 .articles h3 {
   color: var(--gold);
+  font-weight: 300;
 }
 .articles p {
+  padding: 1em 0;
   font-size: 1.1em;
   text-align: justify;
   color: var(--grey);
 }
-
 /* --------- Footer --------- */
-
-footer {
+.footer-content {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: max-content;
   margin-top: auto;
-}
-
-.footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,16 +229,14 @@ footer {
   width: 100%;
 }
 .social-links ul {
-  width: 15em;
-  height: 5em;
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
-.social-links ul li {
-  margin: 0 2.5em;
+.redes {
+  display: block;
+  padding: 10px 40px;
 }
 .outer-footer {
   width: 100%;
@@ -321,530 +249,71 @@ footer {
   text-align: center;
   color: #fff;
 }
-
-/* --------- Media Queries --------- */
-
-@media screen and (min-width: 1921px) {
-  /* --------- Sub-menú de la sección Servicios --------- */
-
-  nav ul.nav-links li:hover ul {
-    display: block;
-    top: 7.5vh;
-    right: 16vh;
-  }
-
-  /* --------- Main --------- */
-
-  main {
-    display: flex;
-    margin: 10em;
-    max-height: max-content;
-  }
-  .header-main {
-    margin-top: 0em;
-  }
-  .header-main h1 {
-    font-size: 2em;
-  }
-  .articles {
-    width: 40em;
-  }
-  .articles h2 {
-    font-size: 1.5em;
-  }
-  .articles h3 {
-    font-size: 1.1em;
-  }
-  .articles p {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 1367px) and (max-width: 1920px) {
-  /* --------- Sub-menú de la sección Servicios --------- */
-
-  nav ul.nav-links li:hover ul {
-    display: block;
-    top: 8vh;
-    right: 16vh;
-  }
-
-  /* --------- Main --------- */
-
-  main {
-    display: flex;
-    margin: 10em;
-    max-height: max-content;
-  }
-  .header-main {
-    margin-top: 0em;
-  }
-  .header-main h1 {
-    font-size: 2em;
-  }
-  .articles h2 {
-    font-size: 1.5em;
-  }
-  .articles h3 {
-    font-size: 1.1em;
-  }
-  .articles p {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  /* --------- Sub-menú de la sección Servicios --------- */
-  .submenu {
-    width: max-content;
-    padding: 0.5em;
-    right: 21vh;
-    z-index: 1;
-  }
-  .submenu li {
-    margin: 0.2em;
-  }
-  .submenu li a {
-    margin: 0.5rem;
-  }
-  .submenu.show {
+@media screen and (max-width: 992px) {
+  #boton {
     display: block;
   }
-  nav ul.nav-links li ul {
-    display: none;
-  }
-  nav ul.nav-links li:hover ul {
-    display: block;
-    top: 11vh;
-    right: 18vh;
-  }
-  nav ul.nav-links li:hover::after ul {
-    content: "";
+  .menu {
+    width: 300px;
+    height: calc(100vh - 60px);
+    background: var(--darkgrey);
     position: absolute;
-    display: block;
+    top: 70px;
+    right: -100%;
+    transition: all 1s;
+    overflow-y: scroll;
   }
-
-  /* --------- Main --------- */
-
-  main {
-    display: flex;
-    margin: 10em;
-    max-height: max-content;
-  }
-
-  .header-main {
-    margin-top: 0em;
-  }
-  .header-main h1 {
-    font-size: 2em;
-  }
-  .articles {
-    width: 20em;
-  }
-  .articles h2 {
-    font-size: 1.5em;
-  }
-  .articles h3 {
-    font-size: 1.1em;
-  }
-  .articles p {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 721px) and (max-width: 1024px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .burger {
-    margin-right: 2em;
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 11vh;
-    right: 0vh;
-    height: 30vh;
-    background-color: #343434;
-    border-radius: 0.3em;
-    display: flex;
+  .lista {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
   }
-  .nav-links ul li {
-    margin: auto;
+  .slide {
+    position: relative;
+    top: 0;
+    display: none;
+    width: 100%;
   }
-  .nav-links li {
-    opacity: 0;
-    margin: 0;
-    padding: 0;
+  .slide ul {
+    position: relative;
+    top: 0;
+    left: 0;
   }
-
-  .item-list {
-    font-size: 1em;
-  }
-  .nav-active {
-    margin-right: 2vh;
-    padding: 0.5em;
-    top: 10vh;
-    height: max-content;
-    border: 1px solid var(--gold);
-    transform: translateX(0%);
+  a {
+    display: block !important;
   }
 
-  @-webkit-keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+  .listItem > .slide li a {
+    margin: 0px;
   }
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+  .listItem .slide li > ul li a {
+    margin-left: 0px;
   }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  /* --------- Sub-menú de la sección Servicios --------- */
-
-  .submenu li {
-    margin: 0.2em;
-  }
-  .submenu li a {
-    font-size: 1em;
-    margin: 0.5rem;
-  }
-
-  .submenu.show {
-    display: block;
-  }
-
-  nav ul.nav-links li ul {
+  .listItem:hover > .slide {
     display: none;
   }
-
-  nav ul.nav-links li:hover ul {
-    width: 10em;
-    display: block;
-    top: 0vh;
-    right: 16vh;
+  .listItem .slide li:hover > ul {
+    display: none;
   }
-
-  /* --------- Icono del Sub-menú Servicios --------- */
-
-  .fas.fa-angle-down {
-    margin-left: 0.2em;
-    color: var(--gold);
-  }
-
-  /* --------- Main --------- */
-
-  main {
-    margin: 8em 0;
-  }
-  .header-main {
-    margin: 0.5em;
-  }
-  .header-main h1 {
-    font-size: 2em;
+  .main-container {
+    margin: 0 0 10em;
+    padding: 0;
+    width: 100%;
   }
   .body-container {
-    width: 90%;
-  }
-  .body-container p {
-    font-size: 1em;
+    display: flex;
+    width: 100%;
   }
 }
-@media screen and (min-width: 601px) and (max-width: 720px) {
-  body {
-    overflow-x: hidden;
-  }
 
-  .burger {
-    margin-right: 2em;
-    display: block;
+@media screen and (max-width: 380px) {
+  .menu {
+    width: 100%;
   }
-
-  .nav-links {
-    position: absolute;
-    top: 11vh;
-    right: 0vh;
-    height: 30vh;
-    background-color: #343434;
-    border-radius: 0.3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-  .nav-links ul li {
-    margin: auto;
-  }
-  .nav-links li {
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-  }
-
-  .item-list {
-    font-size: 1em;
-  }
-  .nav-active {
-    margin-right: 2vh;
-    padding: 0.5em;
-    height: max-content;
-    border: 1px solid var(--gold);
-    transform: translateX(0%);
-  }
-
-  @-webkit-keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  /* --------- Sub-menú de la sección Servicios --------- */
-
-  .submenu li {
-    margin: 0.2em;
-  }
-  .submenu li a {
-    font-size: 1em;
-    margin: 0.5rem;
-  }
-
-  .submenu.show {
-    display: block;
-  }
-
-  nav ul.nav-links li ul {
-    display: none;
-  }
-
-  nav ul.nav-links li:hover ul {
-    width: 10em;
-    display: block;
-    top: 0vh;
-    right: 17vh;
-  }
-
-  /* --------- Icono del Sub-menú Servicios --------- */
-
-  .fas.fa-angle-down {
-    margin-left: 0.2em;
-    color: var(--gold);
-  }
-
-  /* --------- Main --------- */
 
   .main-container {
-    margin: 8em 0 10em;
-    padding: 0;
+    margin-bottom: 10em;
   }
-  .header-main {
-    margin: 1em 0;
-  }
-  .header-main h1 {
-    font-size: 2em;
-  }
-
   .body-container {
-    width: 100%;
-    margin: 0;
-  }
-
-  .body-container p {
-    font-size: 1em;
-  }
-  .articles h2,
-  .articles h3 {
-    text-align: center;
-    font: size 1.2em;
-    padding-bottom: 0.3em;
-  }
-  .articles p {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-links {
-    position: absolute;
-    top: 13vh;
-    right: 0;
-    height: 30vh;
-    background-color: #343434;
-    border-radius: 0.3em;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-  .nav-links ul li {
-    margin: auto;
-  }
-  .nav-links li {
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-  }
-  .item-list {
-    font-size: 1em;
-  }
-  .nav-active {
-    margin-right: 2vh;
-    padding: 0.5em;
-    top: 15vh;
-    height: max-content;
-    border: 1px solid var(--gold);
-    transform: translateX(0%);
-  }
-
-  @-webkit-keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  .burger {
-    margin: 0;
-    display: block;
-  }
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  /* --------- Sub-menú de la sección Servicios --------- */
-
-  .submenu li {
-    margin: 0.2em;
-  }
-  .submenu li a {
-    font-size: 0.9em;
-    margin: 0.5rem;
-  }
-
-  .submenu.show {
-    display: block;
-  }
-
-  nav ul.nav-links li ul {
-    display: none;
-  }
-
-  nav ul.nav-links li:hover ul {
-    width: 10em;
-    display: block;
-    top: 0vh;
-    right: 17vh;
-  }
-
-  /* --------- Icono del Sub-menú Servicios --------- */
-
-  .fas.fa-angle-down {
-    margin-left: 0.2em;
-    color: var(--gold);
-  }
-
-  /* --------- Main --------- */
-
-  .main-container {
-    margin: 8em 0 10em;
-    padding: 0;
-  }
-  .header-main {
-    margin: 1em 0;
-  }
-  .header-main h1 {
-    font-size: 2em;
-  }
-
-  .body-container {
     width: 100%;
-    margin: 0;
-  }
-
-  .body-container p {
-    font-size: 1em;
-  }
-  .articles h2,
-  .articles h3 {
-    text-align: center;
-    font: size 1.2em;
-    padding-bottom: 0.3em;
-  }
-  .articles p {
-    font-size: 1em;
   }
 }
