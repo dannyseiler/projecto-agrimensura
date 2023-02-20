@@ -26,9 +26,20 @@ img {
 span {
   color: #fff;
 }
+
+#space{
+  padding-left: 30px;
+}
+#name {
+  font-size: 18px;
+}
+
+.prof {
+  font-size: 9px;
+}
 .header {
   width: 100%;
-  height: 80px;
+  height: 100px;
   padding: 0 20px;
   top: 0;
   left: 0;
@@ -165,14 +176,8 @@ span {
 .fa-envelope {
   color: #f8f8f8;
 }
-.info2 ul {
-  padding-left: 0;
-}
 li {
   list-style: none;
-}
-#space{
-  padding-left: 30px;
 }
 
 .info3 li{
