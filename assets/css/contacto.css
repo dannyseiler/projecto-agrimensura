@@ -23,6 +23,9 @@ img {
   border-radius: 50%;
 }
 
+span {
+  color: #fff;
+}
 .header {
   width: 100%;
   height: 80px;
@@ -146,6 +149,35 @@ img {
 .fas.fa-angle-down {
   margin-left: 0.2em;
   color: var(--gold);
+}
+
+.fa-solid {
+  margin: 5px;
+  font-size: 20px;
+}
+.fa-phone {
+  color: #fff;
+}
+.fa-location-dot {
+  color: #e0450c;
+  align-content: center;
+}
+.fa-envelope {
+  color: #f8f8f8;
+}
+.info2 ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+#space{
+  padding-left: 30px;
+}
+
+.info3 li{
+  display: flex;
+  align-items: center;
 }
 /* --------- Main --------- */
 
