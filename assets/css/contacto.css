@@ -16,26 +16,10 @@ body {
   background: url("../images/contactos.jpg") no-repeat fixed;
   background-size: cover;
 }
-
 img {
   width: 50px;
   margin: 0;
   border-radius: 50%;
-}
-
-span {
-  color: #fff;
-}
-
-#space{
-  padding-left: 30px;
-}
-#name {
-  font-size: 18px;
-}
-
-.prof {
-  font-size: 9px;
 }
 .header {
   width: 100%;
@@ -60,6 +44,11 @@ span {
   margin-left: 10px;
   list-style: none;
   color: #fff;
+}
+
+/* --------- Menu --------- */
+.menu {
+  margin-left: auto;
 }
 .link {
   text-decoration: none;
@@ -91,6 +80,12 @@ span {
 .item-firma:last-child {
   margin-bottom: 0.3em;
 }
+#name {
+  font-size: 18px;
+}
+.prof {
+  font-size: 9px;
+}
 /* --------- Items Nav --------- */
 .lista {
   display: flex;
@@ -100,7 +95,6 @@ span {
 .slide {
   list-style: none;
 }
-
 .item {
   text-decoration: none;
   padding: 20px 30px;
@@ -110,7 +104,6 @@ span {
   position: relative;
   text-align: center;
 }
-
 .slide {
   position: absolute;
   display: none;
@@ -120,14 +113,12 @@ span {
   border: 1px solid var(--gold);
   width: 200px;
 }
-
 .listItem:hover > .slide {
   display: block;
 }
 .listItem .slide li:hover > ul {
   display: block;
 }
-
 .slide ul {
   position: absolute;
   right: 200px;
@@ -146,7 +137,6 @@ span {
   padding: 10px 20px;
   display: block;
 }
-
 #boton {
   background: none;
   border: none;
@@ -155,13 +145,11 @@ span {
   cursor: pointer;
   display: none;
 }
-
 /* --------- Icono del Sub-menú Servicios --------- */
 .fas.fa-angle-down {
   margin-left: 0.2em;
   color: var(--gold);
 }
-
 .fa-solid {
   margin: 5px;
   font-size: 20px;
@@ -273,6 +261,12 @@ div.info3 {
   color: #fff;
   transition: background-color 0.5s ease-out;
   outline: 0;
+}
+span {
+  color: #fff;
+}
+#space{
+  padding-left: 30px;
 }
 /* --------- Footer --------- */
 .footer-content {
