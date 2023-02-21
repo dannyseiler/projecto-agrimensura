@@ -181,17 +181,13 @@ img {
 }
 .body-container {
   width: 60em;
-  padding: 1em;
+  padding: 1em 3em;
   background-color: var(--black-background);
   box-shadow: 5px 10px 10px 0px var(--black-background);
   border-radius: 0.5em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.articles {
-  width: 20em;
-  margin: 1em;
+  justify-content: space-between;
 }
 html {
   scroll-behavior: smooth;
@@ -202,8 +198,13 @@ section [a] {
 .articles a {
   text-decoration: none;
   color: var(--gold);
-  font-size: 1.3em;
+  font-size: 1.1em;
   cursor: default;
+}
+
+article {
+  width: 25em;
+  margin: 0.3em;
 }
 .articles h3 {
   color: var(--gold);
@@ -211,7 +212,7 @@ section [a] {
 }
 .articles p {
   padding: 1em 0;
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: justify;
   color: var(--grey);
 }
